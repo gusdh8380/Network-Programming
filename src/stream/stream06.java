@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class streram06 {
+public class stream06 {
 	public static void main(String[] args) throws IOException {
 
 		var url = new URL("https://www.skhu.ac.kr/sites/skhu/images/sub/ideo_3.jpg");
