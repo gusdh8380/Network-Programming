@@ -12,6 +12,7 @@ public class DaytimeClient2 {
 		final int PORT = 13;
 		try (Socket socket = new Socket(HOST, PORT)) {
 			StringBuilder result = new StringBuilder();
+			//한글 문자열을 읽으려면 Reade 객체로 읽기
 			Reader reader = new InputStreamReader(socket.getInputStream(), "UTF-8");
 			while (true) {
 				int c = reader.read();

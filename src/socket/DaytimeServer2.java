@@ -15,7 +15,7 @@ public class DaytimeServer2 {
 				try (Socket socket = serverSocket.accept()) {
 					Writer out = new OutputStreamWriter(socket.getOutputStream(), "UTF-8");
 					Date now = new Date();
-					out.write("현재 시각: ");
+					out.write("현재 시각: "); //한글 문자열!
 					out.write(now.toString());
 					out.write("\r\n");
 					out.flush();
