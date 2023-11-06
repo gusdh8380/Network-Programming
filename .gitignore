@@ -2,3 +2,7 @@ bin/
  .settings/
  .classpath
  .project
+/.classpath
+/.DS_Store
+/.project
+/ideo_3.jpg
