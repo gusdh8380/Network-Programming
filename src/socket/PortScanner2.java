@@ -27,10 +27,13 @@ public class PortScanner2 {
 	public static void main(String[] args) {
 		String host = "www.skhu.ac.kr";
 		int portFrom = 1, portTo = 10000;
+		//ExecutorService를 이용하여 쓰레드 1000개를 만들어서 동시에 연결을 시도
 		ExecutorService executor = Executors.newFixedThreadPool(1000);
 		for (int port = portFrom; port <= portTo; ++port) {
 			executor.submit(new PortTask(host, port));
 		}
+
+
 		executor.shutdown();
 		try {
 			executor.awaitTermination(1, TimeUnit.HOURS);
